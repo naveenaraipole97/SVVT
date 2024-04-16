@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Search</title>
+    <style>
+        /* CSS styles for demonstration purposes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        /* Additional CSS for checkboxes and slider */
+        .checkbox-container {
+            margin-bottom: 10px;
+        }
+        .slider-container {
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        input[type="range"] {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Search</h1>
+        <img src="images/cooking-image.png" alt="Cooking Image">
+        <label for="search">Enter Keywords:</label>
+        <input type="text" id="search" placeholder="Search for recipes...">
+        <div class="checkbox-container">
+            <label><input type="checkbox"> Vegetarian</label>
+            <label><input type="checkbox"> Gluten-Free</label>
+        </div>
+        <button onclick="searchRecipes()">Search</button>
+        <div class="slider-container">
+            <label for="difficulty">Difficulty:</label>
+            <input type="range" id="difficulty" min="1" max="5" value="3">
+        </div>
+    </div>
+
+    <!-- Navigation to Page 2 -->
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="page2.html">Next Page</a>
+    </div>
+
+    <script>
+        // Function to handle recipe search
+        function searchRecipes() {
+            var searchQuery = document.getElementById('search').value;
+            // Perform search functionality (you can implement this later)
+            console.log("Search query:", searchQuery);
+        }
+    </script>
+</body>
+</html>

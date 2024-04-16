@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Recipe App</title>
+    <style>
+        /* CSS styles for demonstration purposes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 0 20px;
+            text-align: center; /* Center-align content */
+        }
+        img {
+            max-width: 60%; /* Increased image size */
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            resize: vertical; /* Enable vertical resizing */
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        /* Additional CSS for radio button and slider */
+        .radio-container {
+            margin-bottom: 20px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        .slider-container {
+            margin-bottom: 20px;
+        }
+        input[type="range"] {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Recipe App</h1>
+        <img src="images/recipe-app.jpeg" alt="App Image">
+        <label for="description">Description:</label>
+        <textarea id="description" rows="6" disabled>This Recipe App is designed to help users discover and save their favorite recipes. With a user-friendly interface and robust search functionality, finding delicious meals has never been easier!</textarea>
+        <div class="radio-container">
+            <label>Feedback:</label>
+            <label><input type="radio" name="feedback" value="positive"> Positive</label>
+            <label><input type="radio" name="feedback" value="neutral"> Neutral</label>
+            <label><input type="radio" name="feedback" value="negative"> Negative</label>
+        </div>
+        <div class="slider-container">
+            <label for="rating">Rate the App:</label>
+            <input type="range" id="rating" min="1" max="5" value="3">
+        </div>
+        <button onclick="submitFeedback()">Submit Feedback</button>
+    </div>
+
+    <script>
+        // Function to submit feedback
+        function submitFeedback() {
+            // Get selected feedback
+            var feedback = document.querySelector('input[name="feedback"]:checked').value;
+            // Get rating
+            var rating = document.getElementById('rating').value;
+            // Perform submission (you can implement this later)
+            console.log("Feedback:", feedback);
+            console.log("Rating:", rating);
+            // Redirect to homepage
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

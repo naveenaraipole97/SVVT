@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Search</title>
+    <style>
+        /* CSS styles for demonstration purposes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #007bff; /* Change text color */
+            margin-bottom: 30px; /* Increase margin */
+        }
+        .container {
+            max-width: 80%; /* Change max-width */
+            margin: 50px auto; /* Change margin */
+            padding: 0 20px;
+            background-color: #f9f9f9; /* Change background color */
+            border-radius: 10px; /* Add border radius */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+        }
+        img {
+            max-width: 80%; /* Change max-width */
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 90%; /* Change width */
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 15px 20px; /* Change padding */
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            width: 90%; /* Make button full-width */
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        /* Additional CSS for checkboxes and slider */
+        .checkbox-container {
+            margin-bottom: 30px; /* Increase margin */
+        }
+        .slider-container {
+            margin-bottom: 30px; /* Increase margin */
+        }
+        label {
+            display: block;
+            margin-bottom: 15px; /* Increase margin */
+        }
+        input[type="checkbox"] {
+            margin-right: 10px; /* Change margin */
+        }
+        input[type="range"] {
+            width: 100%; /* Change width */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Search</h1>
+        <img src="images/cooking-image.png" alt="Cooking Image">
+        <label for="search">Enter Keywords:</label>
+        <input type="text" id="search" placeholder="Search for recipes...">
+        <div class="checkbox-container">
+            <label><input type="checkbox"> Vegetarian</label>
+            <label><input type="checkbox"> Gluten-Free</label>
+        </div>
+        <button onclick="searchRecipes()">Search</button>
+        <div class="slider-container">
+            <label for="difficulty">Difficulty:</label>
+            <input type="range" id="difficulty" min="1" max="5" value="3">
+        </div>
+    </div>
+
+    <!-- Navigation to Page 2 -->
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="page2.html">Next Page</a>
+    </div>
+
+    <script>
+        // Function to handle recipe search
+        function searchRecipes() {
+            var searchQuery = document.getElementById('search').value;
+            // Perform search functionality (you can implement this later)
+            console.log("Search query:", searchQuery);
+        }
+    </script>
+</body>
+</html>

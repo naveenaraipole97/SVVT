@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Detail</title>
+    <style>
+        /* CSS styles for demonstration purposes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        img {
+            max-width: 40%;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            resize: vertical; /* Enable vertical resizing */
+            width: 95%; /* Enlarge the textarea width */
+        }
+        button {
+            padding: 15px; /* Increase button padding */
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        /* Additional CSS for checkboxes and list */
+        .checkbox-container {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center; /* Align items vertically */
+        }
+        input[type="checkbox"] {
+            margin-right: 5px; /* Move checkbox to the left */
+        }
+        .recipe-list {
+            list-style-type: none;
+            padding: 0;
+            max-height: 200px; /* Set max height for scrollbar */
+            overflow-y: auto; /* Enable vertical scrollbar */
+            border: 1px solid #ccc; /* Add border for clarity */
+            padding: 10px;
+            background-color: #f9f9f9; /* Add background color for clarity */
+        }
+        .recipe-list li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Detail</h1>
+        <img src="images/spagetti.jpeg" alt="Recipe Image">
+        <label for="title">Recipe Title:</label>
+        <input type="text" id="title" value="Spaghetti Carbonara" disabled>
+        <label for="ingredients">Ingredients:</label>
+        <textarea id="ingredients" rows="4" disabled>Bacon
+Eggs
+Parmesan Cheese
+Spaghetti
+Salt
+Pepper</textarea>
+        <label for="instructions">Preparation Instructions:</label>
+        <textarea id="instructions" rows="6" disabled>Cook spaghetti according to package instructions.
+Meanwhile, fry bacon in a pan until crispy, then remove from pan and set aside.
+In a bowl, whisk together eggs, Parmesan cheese, salt, and pepper.
+When spaghetti is cooked, drain it and immediately add it to the pan with the bacon fat.
+Quickly pour in the egg mixture and stir until the eggs thicken and coat the spaghetti.
+Serve immediately, garnished with additional Parmesan cheese and black pepper.</textarea>
+        <div class="checkbox-container">
+            <input type="checkbox" id="favorites" checked>
+            <label for="favorites">Save to Favorites</label>
+        </div>
+        <div class="recipe-list">
+            <label>Related Recipes:</label>
+            <ul>
+                <li>Spaghetti Aglio e Olio</li>
+                <li>Creamy Mushroom Risotto</li>
+                <li>Classic Margherita Pizza</li>
+                <li>Chicken Alfredo</li>
+                <li>Chocolate Lava Cake</li>
+                <li>Grilled Salmon with Lemon Butter Sauce</li>
+                <li>Vegan Lentil Soup</li>
+            </ul>
+        </div>
+        <button onclick="goToNextPage()">Next</button>
+    </div>
+
+    <script>
+        // Function to navigate to the next page
+        function goToNextPage() {
+            window.location.href = "page3.html";
+        }
+    </script>
+</body>
+</html>
